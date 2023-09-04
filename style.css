@@ -23,7 +23,7 @@ button{
     width: 7px;
 }
 ::-webkit-scrollbar-thumb{
-    background: var(--clr-orange);
+    background: var(--clr-wht);
 }
 ::-webkit-scrollbar-track{
     background: var(--clr-blk);
