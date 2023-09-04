@@ -1,0 +1,428 @@
+@font-face {
+    font-family: bolt;
+    src: url(./assets/fonts/AquireBold-8Ma60.otf);
+}
+/* U{titlity */
+html{
+    overflow-x: hidden;
+}
+body{
+    font-family: var(--ff-g);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--clr-blk);
+}
+button{
+    cursor: pointer;
+}
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--clr-orange);
+}
+::-webkit-scrollbar-track{
+    background: var(--clr-blk);
+}
+/* ::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+  } */
+/* End utitlity */
+header{
+    background-image: linear-gradient(orange,rgb(255, 187, 0));
+}
+/* Nav */
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--clr-orange);
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+ul li{
+    margin-right: 1rem;
+}
+.logo{
+    width: 100px;
+    padding: 0.2rem;
+}
+.nav-links{
+    display: flex;
+}
+/* End Nav */
+/* Hero */
+.hero-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.hero-header-text{
+    font-size: var(--fs-5-5);
+    font-weight: var(--fw-900);
+}
+/* End hero */
+/* Project */
+
+.project-logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    bottom: 330px;
+}
+.section-logo{
+    height: 800px;
+    width: max-content;
+}
+.projects-title{
+    display: flex;
+    justify-content: center;
+    font-size: var(--fs-big);
+    font-weight: var(--fw-900);
+    opacity: 0.1;
+    font-family: none;
+    position: relative;
+    bottom: 180px;
+    overflow: hidden;
+}
+/* Project One */
+.project-one{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "ecommerce-title ecommerce-content";
+    height: 100vh;
+    position: relative;
+    bottom: 720px;
+    opacity: 0.9;
+}
+.project-one-title{
+    grid-area: ecommerce-title;
+    background-image: linear-gradient(violet,pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project-one-content{
+    grid-area: ecommerce-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.btn-e-commerce{
+    background-image: linear-gradient(orange,rgb(255, 187, 0));
+    border: none;
+    font-size: var(--fs-2);
+    padding: 0 0.5rem 0 0.5rem;
+    cursor: pointer;
+    box-shadow: var(--bx-shdwl);
+}
+.project-one-text{
+    font-family: bolt;
+    font-size: var(--fs-5-5);
+    padding: 1rem;
+}
+.project-one-description{
+    padding: 1rem;
+}
+/* End Project One */
+/* Project One Hidden */
+.project-one-hidden-container{
+    display: none;
+    position: absolute;
+    flex-direction: row;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(orange,rgb(255, 187, 0));
+    opacity: 0.9;
+}
+.project-one-hidden-title-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.project-one-hidden-title{
+    font-size: var(--fs-5-5);
+    font-family: bolt;
+    line-height: 4rem;
+    padding: 1rem;
+}
+.close-project-container{
+    position: fixed;
+    right: 0;
+}
+.close-project{
+    margin: 4rem;
+    font-size: var(--fs-4);
+    border: none;
+    background-color: var(--clr-orange);
+    cursor: pointer;
+    z-index: 1;
+}
+.indent{
+    margin-left: 10rem;
+}
+.project-one-hidden-image{
+    height: 500px;
+}
+.project-one-hidden-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 80vh;
+    opacity: 0.9;
+}
+.project-display{
+    display: block;
+}
+.project-hide{
+    display: none;
+}
+/* End Project One Hidden */
+/* End project */
+/* Contact */
+.contact-container{
+    position: relative;
+    bottom: 720px;
+    background: var(--clr-dblk);
+}
+.contact-logo-container{
+    display: flex;
+    justify-content: center;
+}
+.contact-title-input-container{
+    position: relative;
+    bottom: 90px;
+}
+.contact-title-container{
+    display: flex;
+    justify-content: center;
+}
+.contact-title{
+    font-size: var(--fs-5-5);
+    font-weight: var(--fw-900);
+    color: var(--clr-wht);
+}
+.contact-form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact-form-inputs-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.input{
+    width: 60%;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    font-size: var(--fs-2);
+}
+.input:focus{
+    background-image: linear-gradient(orange,rgb(255, 187, 0));
+}
+.text-area{
+    width: 60.2%;
+    padding: 1rem;
+    height: 15rem;
+    margin-bottom: 0.5rem;
+    font-size: var(--fs-2);
+}
+.text-area:focus{
+    background-image: linear-gradient(orange,rgb(255, 187, 0));
+}
+.btn-send-message{
+    background-image: linear-gradient(orange,rgb(255, 187, 0));
+    border: none;
+    font-size: var(--fs-2);
+    padding: 0 0.5rem 0 0.5rem;
+}
+/* End Contact */
+
+
+/* Laptop Device */
+@media only screen and (max-width: 1200px){
+    .project-one{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "ecommerce-title" 
+        "ecommerce-content";
+    }
+    .projects-title{
+        font-size: var(--fs-medium);
+        height: 57vh;
+        overflow-x: hidden;
+    }
+    .project-logo-container{
+        bottom: 320px;
+    }
+    .section-logo{
+        height: 700px;
+    }
+    .project-one{
+        bottom: 650px;
+    }
+    .contact-container{
+        bottom: 650px;
+    } 
+}
+/* End Laptop Device */
+/* Tablet */
+@media only screen and (max-width: 768px){
+    .hero-header-text {
+        font-size: var(--fs-4);
+    }
+    .project-one-text{
+        font-size: var(--fs-4);
+    }
+    .projects-title{
+        font-size: var(--fs-small);
+        height: 60vh;
+        overflow-x: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .project-logo-container{
+        bottom: 300px;
+    }
+    .section-logo{
+        height: 500px;
+    }
+    .project-one{
+        bottom: 620px;
+    }
+    .contact-container{
+        bottom: 580px;
+    }
+    .contact-title{
+        font-size: var(--fs-4);
+    }
+    .input {
+        font-size: var(--fs-1-2);
+    }
+    .text-area {
+        font-size: var(--fs-1-2);
+    }
+    .button{
+        font-size: var(--fs-1-5);
+        padding: 0 0.5rem 0 0.5rem;
+    }
+}
+/* End Tablet */
+/* Tablet */
+@media only screen and (max-width: 550px){
+    .project-one-text{
+        font-size: var(--fs-3);
+    }
+    .projects-title{
+        font-size: var(--fs-xsmall);
+        height: 40vh;
+        overflow-x: hidden;
+    }
+    .project-logo-container{
+        bottom: 280px;
+    }
+    .section-logo{
+        height: 500px;
+    }
+    .project-one{
+        bottom: 550px;
+    }
+    .contact-container{
+        bottom: 550px;
+    }
+    .contact-title-input-container{
+        bottom: 50px;
+    }
+    .contact-title{
+        font-size: var(--fs-3);
+    }
+    .input {
+        padding: 0.5rem;
+    }
+    .text-area {
+        width: 60.5%;
+        padding: 0.5rem;
+    }
+    .button{
+        font-size: var(--fs-1-2);
+        padding: 0 0.5rem 0 0.5rem;
+    }
+    
+}
+/* End Tablet */
+
+
+
+
+
+
+
+
+/* Laptop Device */
+@media only screen and (max-width: 1200px){
+    .project-one-hidden-title {
+        font-size: var(--fs-4-5);
+    }
+}
+/* End Laptop Device */
+/* Tablet */
+@media only screen and (max-width: 768px){
+    .project-one-hidden-title {
+        font-size: var(--fs-3-5);
+        line-height: 2.4rem;
+        position: relative;
+        bottom: -60px;
+    }
+    .indent{
+        margin-left: 5rem;
+    }
+    .close-project {
+        font-size: var(--fs-3);
+        position: relative;
+        top: -60px;
+        right: -50px;
+    }
+    .project-one-hidden-image {
+        height: 450px;
+    }
+}
+/* End Tablet */
+/* Tablet */
+@media only screen and (max-width: 550px){
+    .project-one-hidden-title {
+        font-size: 2.5rem;
+        line-height: 2.1rem;
+        bottom: -120px;
+    }
+    .indent{
+        margin-left: 3rem;
+    }
+    .close-project {
+        font-size: var(--fs-2);
+    }
+    .project-one-hidden-image {
+        height: 350px;
+    }
+}
