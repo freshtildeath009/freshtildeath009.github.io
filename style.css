@@ -41,13 +41,19 @@ header{
 /* Nav */
 .nav-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background: var(--clr-orange);
     width: 100%;
     position: fixed;
     z-index: 1;
     opacity: 0.9;
+}
+.logo-links-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
 }
 ul li{
     margin-right: 1rem;
