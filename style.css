@@ -187,6 +187,8 @@ ul li{
     width: 100vw;
     height: 80vh;
     opacity: 0.9;
+    position: relative;
+    top: -50px
 }
 .project-display{
     display: block;
@@ -385,6 +387,12 @@ ul li{
     .project-one-hidden-title {
         font-size: var(--fs-4-5);
     }
+    .project-one-hidden-image{
+        height: 420px;
+    }
+    .project-one-hidden-image-container{
+        top: -30;
+    }
 }
 /* End Laptop Device */
 /* Tablet */
@@ -404,6 +412,9 @@ ul li{
         top: -60px;
         right: -50px;
     }
+    .project-one-hidden-image-container{
+        top: 0;
+    }
     .project-one-hidden-image {
         height: 450px;
     }
@@ -421,6 +432,9 @@ ul li{
     }
     .close-project {
         font-size: var(--fs-2);
+    }
+    .project-one-hidden-image-container{
+        top: 30px;
     }
     .project-one-hidden-image {
         height: 350px;
