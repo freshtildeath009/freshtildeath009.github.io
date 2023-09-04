@@ -218,6 +218,7 @@ ul li{
 .contact-logo-container{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .contact-title-input-container{
     position: relative;
@@ -226,6 +227,7 @@ ul li{
 .contact-title-container{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .contact-title{
     font-size: var(--fs-5-5);
