@@ -139,7 +139,7 @@ ul li{
     justify-content: center;
 }
 /* Slider images */
-.slider {
+/* .slider {
     position: relative;
     width: 90%;
     overflow: hidden;
@@ -147,9 +147,9 @@ ul li{
 .images-container {
     display: flex;
     width: 100%;
+    margin-top: 1rem;
 }
 .ecommerce-slide {
-    height: 400px;
     width: 100%;
     transition: all 0.15s ease;
 }
@@ -182,7 +182,7 @@ ul li{
 }
 #img4:checked ~ .m4 {
     margin-left: -300%;
-}
+} */
 /* End slider images */
 
 .btn-e-commerce{
@@ -352,6 +352,9 @@ ul li{
     }
     .project-one{
         bottom: 650px;
+    }
+    .images-container{
+        overflow: hidden;
     }
     .contact-container{
         bottom: 650px;
