@@ -470,16 +470,31 @@ ul li{
 
 
 
-
+.greetings-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 .thank-you-container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    flex-direction: column;
 }
 .thanks-text{
     text-shadow: var(--txt-shdwl);
     font-size: var(--fs-2);
     padding: 2rem;
     text-align: center;
+}
+.btn-back-home{
+    width: 100%;
+    padding: 0 1rem 0 1rem;
+    font-size: var(--fs-1-2);
+}
+.btn-back-home:hover{
+    background-image: linear-gradient(orange,rgb(255, 187, 0));
+    border: none;
 }
