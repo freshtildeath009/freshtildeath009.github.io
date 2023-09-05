@@ -82,24 +82,27 @@
     <!-- End project -->
     <!-- Article -->
     <!-- Contact -->
-    <section class="contact-container">
-        <div class="contact-logo-container">
-            <img class="section-logo payaso" src="./assets/images/payaso.png" alt="">
-        </div>
-        <div class="contact-title-input-container">
-            <div class="contact-title-container">
-                <h1 class="contact-title">Contact</h1>
+        <section class="contact-container">
+            <div class="contact-logo-container">
+                <img class="section-logo payaso" src="./assets/images/payaso.png" alt="">
             </div>
-            <div class="contact-form-container">
-                <form class="contact-form-inputs-container" action="">
-                    <input class="input" type="text" placeholder="first name">
-                    <input class="input" type="text" placeholder="last name">
-                    <textarea class="text-area" placeholder="message"></textarea>
-                    <button class="btn-send-message button" type="button">Send Message!</button>
-                </form>
+            <div class="contact-title-input-container">
+                <div class="contact-title-container">
+                    <h1 class="contact-title">Contact</h1>
+                </div>
+                <div class="contact-form-container">
+                    <form class="contact-form-inputs-container" action="https://formsubmit.co/visrobis@gmail.com" method="POST">
+                        <input class="input" type="text" name="first_name" placeholder="first name" required>
+                        <input type="hidden" name="_next" value="https://freshtildeath009.github.io/thanks.html">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="New email!">
+                        <input class="input" type="email" name="email" placeholder="@email" required>
+                        <textarea class="text-area" placeholder="message" required></textarea>
+                        <button class="btn-send-message button" type="submit">Send Message!</button>
+                    </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
     <!-- End Article -->
     <script src="./script.js"></script>
 </body>

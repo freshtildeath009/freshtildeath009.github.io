@@ -459,3 +459,27 @@ ul li{
         height: 350px;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+.thank-you-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.thanks-text{
+    text-shadow: var(--txt-shdwl);
+    font-size: var(--fs-2);
+    padding: 2rem;
+    text-align: center;
+}
