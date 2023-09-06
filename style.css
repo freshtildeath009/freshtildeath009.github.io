@@ -81,6 +81,61 @@ ul li{
     text-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
 }
 /* End hero */
+
+
+/* Tech stock */
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  
+  .slider {
+    background: white;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .slider::before,
+  .slider::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 400px;
+    z-index: 2;
+  }
+  
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+  
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+  
+  .slider .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+  }
+  
+  .slider .slide {
+    height: 100px;
+    width: 250px;
+  }
+/* End tech stock */
+
 /* Project */
 
 .project-logo-container{
@@ -89,7 +144,7 @@ ul li{
     align-items: center;
     flex-direction: column;
     position: relative;
-    bottom: 330px;
+    bottom: 200px;
 }
 .section-logo{
     height: 800px;
@@ -103,7 +158,7 @@ ul li{
     opacity: 0.6;
     font-family: none;
     position: relative;
-    bottom: 180px;
+    bottom: 120px;
     overflow: hidden;
 }
 /* Project One */
@@ -115,7 +170,7 @@ ul li{
     "ecommerce-title ecommerce-content";
     height: 100vh;
     position: relative;
-    bottom: 720px;
+    bottom: 550px;
     opacity: 0.9;
     margin: 1rem;
     box-shadow: var(--bx-shdwl);
@@ -139,50 +194,7 @@ ul li{
     justify-content: center;
 }
 /* Slider images */
-/* .slider {
-    position: relative;
-    width: 90%;
-    overflow: hidden;
-}
-.images-container {
-    display: flex;
-    width: 100%;
-    margin-top: 1rem;
-}
-.ecommerce-slide {
-    width: 100%;
-    transition: all 0.15s ease;
-}
-.images-container input {
-    display: none;
-}
-.dots {
-    display: flex;
-    justify-content: center;
-    margin: 5px;
-}
-.dots label {
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-    border: solid black 3px;
-    cursor: pointer;
-    transition: all 0.15s ease;
-    margin: 5px;
-}
-.slide-label:hover {background: #fff;}
-#img1:checked ~ .m1 {
-    margin-left: 0;
-}
-#img2:checked ~ .m2 {
-    margin-left: -100%;
-}
-#img3:checked ~ .m3 {
-    margin-left: -200%;
-}
-#img4:checked ~ .m4 {
-    margin-left: -300%;
-} */
+
 /* End slider images */
 
 .btn-e-commerce{
@@ -265,7 +277,7 @@ ul li{
 /* Contact */
 .contact-container{
     position: relative;
-    bottom: 720px;
+    bottom: 550px;
     background: var(--clr-dblk);
     border-radius: 15px 15px 0 0;
     box-shadow: var(--bx-shdwl);
@@ -341,23 +353,23 @@ ul li{
     }
     .projects-title{
         font-size: var(--fs-medium);
-        height: 57vh;
         overflow-x: hidden;
+        bottom: 80px;
     }
     .project-logo-container{
-        bottom: 290px;
+        bottom: 180px;
     }
     .section-logo{
         height: 700px;
     }
     .project-one{
-        bottom: 650px;
+        bottom: 412px;
     }
     .images-container{
         overflow: hidden;
     }
     .contact-container{
-        bottom: 650px;
+        bottom: 410px;
     } 
 }
 /* End Laptop Device */
@@ -366,28 +378,25 @@ ul li{
     .hero-header-text {
         font-size: var(--fs-4);
     }
+    .slider::before,
+    .slider::after {
+      width: 200px;
+    }
     .project-one-text{
         font-size: var(--fs-4);
     }
     .projects-title{
         font-size: var(--fs-small);
-        height: 60vh;
-        overflow-x: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .project-logo-container{
-        bottom: 300px;
+        bottom: 55px;
     }
     .section-logo{
         height: 500px;
     }
     .project-one{
-        bottom: 620px;
+        bottom: 278px;
     }
     .contact-container{
-        bottom: 580px;
+        bottom: 279px;
     }
     .contact-title{
         font-size: var(--fs-4);
@@ -406,25 +415,25 @@ ul li{
 /* End Tablet */
 /* Tablet */
 @media only screen and (max-width: 550px){
+    .slider::before,
+    .slider::after {
+      width: 100px;
+    }
     .project-one-text{
         font-size: var(--fs-2-5);
     }
     .projects-title{
         font-size: var(--fs-xsmall);
-        height: 40vh;
-        overflow-x: hidden;
+        bottom: 35px;
     }
     .project-logo-container{
-        bottom: 280px;
-    }
-    .section-logo{
-        height: 500px;
+        bottom: 170px;
     }
     .project-one{
-        bottom: 550px;
+        bottom: 235px;
     }
     .contact-container{
-        bottom: 550px;
+        bottom: 235px;
     }
     .contact-title-input-container{
         bottom: 50px;
