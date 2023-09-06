@@ -5,6 +5,7 @@
 /* U{titlity */
 html{
     overflow-x: hidden;
+    scroll-behavior: smooth !important;
 }
 body{
     font-family: var(--ff-g);
