@@ -26,10 +26,10 @@
   --fs-medium: 13rem;
   --fs-big: 18.75rem;
   
-  --ff-g: 'Open Sans', sans-serif;
-  --ff-h: 'Open Sans', sans-serif;
-  --ff-r: 'Open Sans', sans-serif;
-
+  --ff-g: 'Source Code Pro', monospace;
+  --ff-h: 'Source Code Pro', monospace;
+  --ff-r: 'Source Code Pro', monospace;
+  
   --fw-400: 400;
   --fw-500: 500;
   --fw-600: 600;
