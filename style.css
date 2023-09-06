@@ -46,7 +46,7 @@ header{
     background: var(--clr-orange);
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     opacity: 0.9;
 }
 .logo-links-container{
@@ -58,12 +58,14 @@ header{
 ul li{
     margin-right: 1rem;
 }
-
+.menu-container{
+    display: none;
+}
 .logo{
     width: 50px;
     padding: 0.2rem;
 }
-.nav-links{
+.li-container{
     display: flex;
 }
 /* End Nav */
@@ -344,6 +346,45 @@ ul li{
 
 /* Laptop Device */
 @media only screen and (max-width: 1200px){
+    /* Menu */
+    .menu-container{
+        display: block;
+    }
+    .menu-logo{
+        height: 20px;
+        cursor: pointer;
+    }
+    .nav-links{
+        width: 185px;
+        position: absolute;
+        top: 100%;
+        left: -200px;
+        background: var(--clr-blk);
+        height: 93vh;
+    }
+    .nav-link-active{
+        left: 0;
+    }
+    .li-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        line-height: 3rem;
+    }
+    .li-container li{
+        width: 109%;
+        text-align: center;
+        cursor: pointer;
+    }
+    .li-container li:hover{
+        background: var(--clr-dblk);
+    }
+    .link{
+        color: var(--clr-wht);
+    }
+    /* End menu */
     .project-one{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
