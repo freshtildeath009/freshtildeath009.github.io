@@ -170,7 +170,7 @@ ul li{
     "ecommerce-title ecommerce-content";
     height: 100vh;
     position: relative;
-    bottom: 550px;
+    bottom: 530px;
     opacity: 0.9;
     margin: 1rem;
     box-shadow: var(--bx-shdwl);
@@ -277,7 +277,7 @@ ul li{
 /* Contact */
 .contact-container{
     position: relative;
-    bottom: 550px;
+    bottom: 530px;
     background: var(--clr-dblk);
     border-radius: 15px 15px 0 0;
     box-shadow: var(--bx-shdwl);
@@ -415,10 +415,16 @@ ul li{
 /* End Tablet */
 /* Tablet */
 @media only screen and (max-width: 550px){
-    .slider::before,
-    .slider::after {
-      width: 100px;
+    .profile{
+        width: 300px;
     }
+    .slider {
+        padding: 1rem 0 1rem 0;
+      }
+      .slider::before,
+      .slider::after {
+        width: 100px;
+      }
     .project-one-text{
         font-size: var(--fs-2-5);
     }
