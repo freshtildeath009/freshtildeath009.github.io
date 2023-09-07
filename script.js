@@ -86,8 +86,7 @@ const observerProgrammerPhoto = new IntersectionObserver(function(entries, obser
         console.log(entry);
         if(entry.isIntersecting){
             setTimeout(()=>{
-                programmerPhoto.src = "./assets/images/profile.png"
-                transition(programmerPhoto)
+                programmerPhoto.src = "./assets/images/profile.png";
             },500)
             
         }
@@ -97,9 +96,5 @@ const observerProgrammerPhoto = new IntersectionObserver(function(entries, obser
     })
 }, imageChange)
 
-function transition(data){
-    programmerPhoto.style.webkitTransition  = 'opacity 2s ease-in-out';
-    programmerPhoto.style.transition = 'opacity 4s ease-in-out';
 
-}
 observerProgrammerPhoto.observe(programmerPhoto);
