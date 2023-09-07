@@ -89,7 +89,7 @@ const observerProgrammerPhoto = new IntersectionObserver(function(entries, obser
                 
                 programmerPhoto.src = "./assets/images/profile.png"
                 transition(programmerPhoto)
-            },1500)
+            },900)
             
         }
         else{
