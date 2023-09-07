@@ -3,17 +3,15 @@
 const menu = document.querySelector('.menu-logo');
 const menuContainer = document.querySelector('.nav-links');
 const all = document.querySelectorAll('.all');
-console.log(all);
 // project one live demo
 const closeProject = document.querySelector('.project-one-hidden-container');
 const btnEcommerce = document.querySelector('.btn-e-commerce');
 // Animate project-one-title from the DOM
 const projectOneTitle = document.querySelector('.project-one-title');
 const projectOneContent = document.querySelector('.project-one-content');
-
+// Change photo
+const programmerPhoto = document.querySelector('.profile');
 // End variables
-
-
 
 // Menu
 menu.addEventListener('click',()=>{
@@ -41,8 +39,6 @@ btnEcommerce.addEventListener('click',()=>{
     closeProject.classList.remove('project-hide')
 })
 // End project one live demo
-
-// Animate project-one-title from the DOM
 let options = {
     root: null,
     rootMargin: "-50px 0px",
@@ -50,6 +46,8 @@ let options = {
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
+    
+    // Animate project-one-title and project-one-content from the DOM
     const observerProjectOneTitle = new IntersectionObserver(function(entries, observe){
         entries.forEach(entry =>{
             if(entry.isIntersecting){
@@ -72,5 +70,37 @@ document.addEventListener('DOMContentLoaded', ()=>{
         })
     },options)
     observerProjectOneContent.observe(projectOneContent);
+    // Animate project-one-title and project-one-content from the DOM
+
+    
 })
-// End Animate project-one-title from the DOM
+
+// Animate programmer photo
+let imageChange ={
+    root: null,
+    rootMargin: "-400px 0px",
+    threshold: 0
+}
+const observerProgrammerPhoto = new IntersectionObserver(function(entries, observe){
+    entries.forEach(entry =>{
+        let item = entry.target.classList
+        if(entry.isIntersecting){
+            setTimeout(()=>{
+                
+                programmerPhoto.src = "./assets/images/profile.png"
+                transition(programmerPhoto)
+            },1000)
+            
+        }
+        else{
+            programmerPhoto.src = "./assets/images/profile(1).png";
+        }
+    })
+}, imageChange)
+
+function transition(data){
+    programmerPhoto.style.webkitTransition  = 'opacity 2s ease-in-out';
+    programmerPhoto.style.transition = 'opacity 4s ease-in-out';
+
+}
+observerProgrammerPhoto.observe(programmerPhoto);
