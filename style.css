@@ -49,6 +49,7 @@ header{
     position: fixed;
     z-index: 3;
     opacity: 0.9;
+    
 }
 .logo-links-container{
     display: flex;
@@ -81,7 +82,7 @@ ul li{
 .hero-header-text{
     font-size: var(--fs-5-5);
     font-weight: var(--fw-900);
-    text-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: inset var(--bx-shdwl);
 }
 /* End hero */
 
@@ -457,7 +458,7 @@ ul li{
 /* End Tablet */
 /* Tablet */
 @media only screen and (max-width: 550px){
-    .profile{
+    .section-logo{
         width: 300px;
     }
     .slider {
