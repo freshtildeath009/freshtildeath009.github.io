@@ -83,13 +83,12 @@ let imageChange ={
 }
 const observerProgrammerPhoto = new IntersectionObserver(function(entries, observe){
     entries.forEach(entry =>{
-        let item = entry.target.classList
+        console.log(entry);
         if(entry.isIntersecting){
             setTimeout(()=>{
-                
                 programmerPhoto.src = "./assets/images/profile.png"
                 transition(programmerPhoto)
-            },900)
+            },500)
             
         }
         else{
