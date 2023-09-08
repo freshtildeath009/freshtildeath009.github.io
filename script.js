@@ -84,8 +84,7 @@ let imageChange ={
 }
 const observerProgrammerPhoto = new IntersectionObserver(function(entries){
     entries.forEach(entry =>{
-        console.log(entry);
-        let item = entry
+        let item = entry;
         if(item.isIntersecting === true || item.intersectionRatio > 0 || item.target.classList === "profile"){
             setTimeout(()=>{
                 programmerPhoto.src = "./assets/images/profile.png"
