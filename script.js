@@ -11,6 +11,7 @@ const projectOneTitle = document.querySelector('.project-one-title');
 const projectOneContent = document.querySelector('.project-one-content');
 // Change photo
 const programmerPhoto = document.querySelector('.profile');
+const programmerContainerPhoto = document.querySelector('.contact-logo-container');
 // End variables
 
 // Menu
@@ -48,7 +49,7 @@ let options = {
 document.addEventListener('DOMContentLoaded', ()=>{
     
     // Animate project-one-title and project-one-content from the DOM
-    const observerProjectOneTitle = new IntersectionObserver(function(entries, observe){
+    const observerProjectOneTitle = new IntersectionObserver(function(entries){
         entries.forEach(entry =>{
             if(entry.isIntersecting){
                 projectOneTitle.classList.add('active');
@@ -59,7 +60,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }, options)
     observerProjectOneTitle.observe(projectOneTitle);
 
-    const observerProjectOneContent = new IntersectionObserver(function(entries, observe){
+    const observerProjectOneContent = new IntersectionObserver(function(entries){
         entries.forEach(entry =>{
             
             if(entry.isIntersecting){
@@ -69,7 +70,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             }
         })
     },options)
-    observerProjectOneContent.observe(projectOneContent);
+    observerProjectOneContent.observe(projectOneContent, programmerPhoto);
     // Animate project-one-title and project-one-content from the DOM
 
     
@@ -78,15 +79,16 @@ document.addEventListener('DOMContentLoaded', ()=>{
 // Animate programmer photo
 let imageChange ={
     root: null,
-    rootMargin: "-400px 0px",
+    rootMargin: "-300px 0px",
     threshold: 0
 }
-const observerProgrammerPhoto = new IntersectionObserver(function(entries, observe){
+const observerProgrammerPhoto = new IntersectionObserver(function(entries){
     entries.forEach(entry =>{
         console.log(entry);
-        if(entry.isIntersecting){
+        let item = entry
+        if(item.isIntersecting === true || item.intersectionRatio > 0 || item.target.classList === "profile"){
             setTimeout(()=>{
-                programmerPhoto.src = "./assets/images/profile.png";
+                programmerPhoto.src = "./assets/images/profile.png"
             },500)
             
         }
