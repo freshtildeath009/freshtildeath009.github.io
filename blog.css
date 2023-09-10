@@ -192,6 +192,8 @@ ul li {
     overflow: hidden;
     font-size: var(--fs-1-2);
     padding: 2rem;
+    box-shadow: var(--bx-shdw);
+    background: var(--clr-blk);
 }
 
 .single-project:hover {
