@@ -25,7 +25,7 @@ body {
     color: var(--clr-wht);
     background: var(--clr-blk);
     letter-spacing: 5px;
-    background-image: url(./assets/images/blog_background.png);
+    /* background-image: url(./assets/images/blog_background.png); */
 }
 
 ul {
