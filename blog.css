@@ -26,6 +26,7 @@ body {
     background: var(--clr-blk);
     letter-spacing: 5px;
     /* background-image: url(./assets/images/blog_background.png); */
+
 }
 
 ul {
@@ -47,11 +48,11 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--clr-wht);
+    background: rgb(189, 189, 12);
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--clr-blk);
+    background: yellow;
 }
 
 /* End utitlity */
@@ -67,6 +68,7 @@ button {
     z-index: 1;
     background-image: url(./assets/images/blog_nav_cover.png);
     object-fit: contain;
+    border-top: solid 3px yellow;
 }
 
 .logo-links-container {
@@ -116,7 +118,8 @@ ul li {
     top: 60px;
     height: 100vh;
     background: var(--clr-blk);
-    border: 1px solid var(--clr-dblk)
+    border: 1px solid var(--clr-dblk);
+    border-left: solid 3px yellow;
 }
 
 .category-items-container {
