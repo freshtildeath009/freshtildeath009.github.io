@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   },
-  options);
+    options);
   observerProjectOneContent.observe(projectOneContent, programmerPhoto);
   // Animate project-one-title and project-one-content from the DOM
 });
@@ -133,14 +133,14 @@ const updateDots = (currentDot, targetDot) => {
   targetDot.classList.add("current-slide");
 };
 
-const hideShowArrows = (slides, prevButton, nextButton, targetIndex)=>{
-  if(targetIndex === 0){
+const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
+  if (targetIndex === 0) {
     prevButton.classList.add("is-hidden");
     nextButton.classList.remove("is-hidden");
-  }else if(targetIndex === slides.length - 1){
+  } else if (targetIndex === slides.length - 1) {
     prevButton.classList.remove("is-hidden");
     nextButton.classList.add("is-hidden");
-  }else{
+  } else {
     prevButton.classList.remove("is-hidden");
     nextButton.classList.remove("is-hidden");
   }
@@ -190,3 +190,5 @@ dotsNav.addEventListener("click", (e) => {
   hideShowArrows(slides, prevButton, nextButton, targetIndex);
 });
 // End carousel
+
+

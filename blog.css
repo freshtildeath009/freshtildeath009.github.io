@@ -1,0 +1,269 @@
+@font-face {
+    font-family: type;
+    src: url(./assets/fonts/Bygonest\ Typewriter.ttf);
+}
+
+@font-face {
+    font-family: typeOne;
+    src: url(./assets/fonts/TravelingTypewriter.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* U{titlity */
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth !important;
+}
+
+body {
+    font-family: typeone;
+    color: var(--clr-wht);
+    background: var(--clr-blk);
+    letter-spacing: 5px;
+    background-image: url(./assets/images/blog_background.png);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-wht);
+}
+
+
+button {
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--clr-wht);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--clr-blk);
+}
+
+/* End utitlity */
+/* Nav */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 0.9rem 0;
+    position: fixed;
+    background: var(--clr-dblk);
+    z-index: 1;
+    background-image: url(./assets/images/blog_nav_cover.png);
+    object-fit: contain;
+}
+
+.logo-links-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+ul li {
+    margin-right: 1rem;
+}
+
+.logo {
+    width: 50px;
+    padding: 0.2rem;
+}
+
+.li-container {
+    display: flex;
+}
+
+.link {
+    font-size: var(--fs-1-2);
+}
+
+.blog-menu-container {
+    display: none;
+}
+
+.blog-menu-logo {
+    height: 50px;
+}
+
+/* End Nav */
+/* Nav category */
+.main {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: "category projects";
+}
+
+.category-container {
+    grid-area: category;
+    position: fixed;
+    width: 200px;
+    top: 60px;
+    height: 100vh;
+    background: var(--clr-blk);
+    border: 1px solid var(--clr-dblk)
+}
+
+.category-items-container {
+    grid-area: projects;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    align-items: center;
+    width: 100%;
+}
+
+.category-title {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    font-size: var(--fs-1-2);
+    background: var(--clr-dblk);
+}
+
+.btn-technology-category {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    background: none;
+    color: var(--clr-wht);
+    cursor: pointer;
+}
+
+.btn-technology-category:hover {
+    opacity: 0.8;
+    background: var(--clr-lblk);
+}
+
+/* End nav category */
+/* Article */
+.mini-projects {
+    grid-area: projects;
+    height: 100vh;
+}
+
+.article-title-container {
+    overflow: hidden;
+}
+
+.article-title {
+    font-size: var(--fs-big);
+    font-family: type;
+    padding: 0 1rem;
+}
+
+.ribbon {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Project */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Single project */
+.single-project {
+    width: 80%;
+    height: 100%;
+    margin: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: var(--fs-1-2);
+    padding: 2rem;
+}
+
+.single-project:hover {
+    box-shadow: var(--bx-shdw);
+    background: var(--clr-blk);
+}
+
+.project-datails {
+    display: flex;
+}
+
+.single-project-photo-container {
+    height: 300px;
+    overflow: hidden;
+}
+
+.single-project-photo {
+    height: 100%;
+    width: 100%;
+    opacity: 0.9;
+}
+
+/* Single project */
+/* End project */
+/* End project */
+/* End article */
+
+/* Device */
+/* Laptop device */
+@media only screen and (max-width: 1200px) {
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "projects";
+    }
+
+    .blog-menu-container {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Category */
+    .category-container {
+        display: none;
+        z-index: 1;
+    }
+
+    .category-container-active {
+        display: block;
+    }
+
+    /* End category */
+
+    /* Article */
+    .article-title {
+        font-size: var(--fs-medium);
+    }
+
+    /* End article */
+}
+
+/* End Laptop device */
+/* Tablet device */
+@media only screen and (max-width: 786px) {
+
+    /* Article */
+    .article-title {
+        position: relative;
+        bottom: -1rem;
+        font-size: var(--fs-small);
+    }
+}
+
+/* End Tablet device */
+/* End device */

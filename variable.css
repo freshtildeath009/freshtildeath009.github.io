@@ -1,4 +1,4 @@
-:root{
+:root {
   --clr-lblk: hsl(180, 1%, 24%);
   --clr-dblk: rgb(0, 0, 0);
   --clr-blk: hsl(200, 6%, 10%);
@@ -10,9 +10,9 @@
   --clr-dorange: hsl(12, 83%, 30%);
   --clr-violet: hsl(295, 65%, 45%);
   --clr-lpink: hsl(0, 99%, 66%);
-  --clr-gray: rgba(255,255,255,0.25);
+  --clr-gray: rgba(255, 255, 255, 0.25);
 
-  --fs-0-8: 0.9rem;
+  --fs-0-9: 0.9rem;
   --fs-1-2: 1.2rem;
   --fs-1-5: 1.5rem;
   --fs-2: 2rem;
@@ -26,11 +26,11 @@
   --fs-small: 9rem;
   --fs-medium: 13rem;
   --fs-big: 18.75rem;
-  
+
   --ff-g: 'Source Code Pro', monospace;
   --ff-h: 'Source Code Pro', monospace;
   --ff-r: 'Source Code Pro', monospace;
-  
+
   --fw-400: 400;
   --fw-500: 500;
   --fw-600: 600;
@@ -58,6 +58,7 @@
   margin: 0;
   padding: 0;
   font: inherit;
+  box-sizing: border-box;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
