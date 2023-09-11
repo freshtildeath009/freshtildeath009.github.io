@@ -65,7 +65,7 @@ button {
     padding: 0.9rem 0;
     position: fixed;
     background: var(--clr-dblk);
-    z-index: 1;
+    z-index: 3;
     background-image: url(./assets/images/blog_nav_cover.png);
     background-size: 100% 100%;
     border-top: solid 3px yellow;
@@ -94,10 +94,15 @@ ul li {
 
 .link {
     font-size: var(--fs-1-2);
+    color: var(--clr-blk);
 }
 
 .blog-menu-container {
     display: none;
+}
+
+.fa-solid {
+    color: var(--clr-blk);
 }
 
 .blog-menu-logo {
@@ -117,18 +122,17 @@ ul li {
     grid-area: category;
     position: fixed;
     width: 200px;
-    top: 60px;
-    height: 100vh;
+    top: 90px;
+    height: 100%;
     background: var(--clr-blk);
     border: 1px solid var(--clr-dblk);
-    border-left: solid 3px yellow;
+    border-left: 3px solid yellow;
 }
 
 .category-items-container {
     grid-area: projects;
     display: flex;
     flex-direction: column;
-    height: 100%;
 
     align-items: center;
     width: 100%;
@@ -168,7 +172,6 @@ ul li {
 
 /* End Ribbon */
 .main {
-    border-left: 2px solid yellow;
     height: 280%;
 }
 
@@ -282,6 +285,9 @@ ul li {
 /* End Laptop device */
 /* Tablet device */
 @media only screen and (max-width: 786px) {
+    .category-container {
+        border-left: none;
+    }
 
     /* Article */
     .article-title-container {
