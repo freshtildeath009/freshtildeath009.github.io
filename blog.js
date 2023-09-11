@@ -1,65 +1,67 @@
 // Variables
-// Display projects
-const projectsContainerDOM = document.querySelector('.projects-container');
-// Filter projects
-const btnFilterProjects = document.querySelectorAll('.btn-technology-category');
-// Blog menu
-const btnBlogMenu = document.querySelector('.blog-menu-container');
-const menuCategory = document.querySelector('.category-container');
-const removeCategory = document.querySelector('.mini-projects');
+// Menu btn
+const menu = document.querySelector('.fa-solid');
+console.log(menu);
+// Category
+const categoryContainer = document.querySelector('.category-container');
+const categoryBtns = document.querySelectorAll('.category-btn');
+// Remove category container
+const removeCategory = document.querySelector('article');
+// Single project DOM
+const singleProjectContainerDOM = document.querySelector('.single-project-container');
 
-document.addEventListener('DOMContentLoaded', () => {
-    displayBlogProjects(blogProjectData)
-    filterTechnologies()
+// Category
+menu.addEventListener('click', () => {
+    categoryContainer.classList.toggle('category-container-active');
 })
 
-// Display projects
-function displayBlogProjects(projectss) {
+// Remove category container
+removeCategory.addEventListener('click', () => {
+    categoryContainer.classList.remove('category-container-active');
+})
 
-    let result = projectss.map((projects) => {
+// Display single projects
+function displaySingleProduct(project) {
+    let result = project.map((project) => {
         return `
-            <div class="single-project" data-id="${projects.id}">
-                <div class="title">${projects.title}</div>
-                <div class="">
-                    <ul class="project-datails">
-                        <li>Tech: <span>${projects.technology}</span></li>
-                        <li>Date: <span>${projects.date}</span> </li>
-                    </ul>
-                    <div class="single-project-photo-container"><img class="single-project-photo"
-                            src="${projects.image}" alt=""></div>
-    
-                    <p>${projects.description}</p>
+        <div class="single-project-item">
+                    <div class="single-project-title-container">
+                        <h1 class="single-project-title">${project.title}</h1>
+                    </div>
+                    <div class="single-project-details">
+                        <div class="single-project-technology-container">
+                            <h1 class="single-project-technology">Technology: <span>${project.technology}</span></h1>
+                        </div>
+                        <div class="single-project-date-container">
+                            <h1 class="single-project-date">Date: <span>${project.date}</span></h1>
+                        </div>
+                    </div>
+                    <div class="single-project-image-container">
+                        <img class="single-project-image" src="${project.image}" alt="">
+                    </div>
+                    <p class="single-project-dialog">${project.description}</p>
                 </div>
-            </div>
         `
     })
     result = result.join("");
-    projectsContainerDOM.innerHTML = result;
+    singleProjectContainerDOM.innerHTML = result;
 }
 
-// Filter projects
-function filterTechnologies() {
-    btnFilterProjects.forEach((buttons) => {
-        buttons.addEventListener('click', (e) => {
-            let item = e.target.dataset.id;
-            const result = blogProjectData.filter((project) => {
-                if (project.technology === item) {
-                    return project;
-                }
-            })
-            if (item === 'all') {
-                displayBlogProjects(blogProjectData);
-            } else {
-                displayBlogProjects(result);
+categoryBtns.forEach((buttons) => {
+    buttons.addEventListener("click", (event) => {
+        let id = event.currentTarget.dataset.id;
+        let result = blogProjectData.filter((project) => {
+            if (project.technology === id) {
+                return project;
             }
         })
+        if (id === 'all') {
+            displaySingleProduct(blogProjectData);
+        } else {
+            displaySingleProduct(result)
+        }
     })
-}
-
-// Blog menu
-btnBlogMenu.addEventListener('click', () => {
-    menuCategory.classList.toggle('category-container-active');
 })
-removeCategory.addEventListener('click', () => {
-    menuCategory.classList.remove('category-container-active');
+document.addEventListener('DOMContentLoaded', () => {
+    displaySingleProduct(blogProjectData)
 })

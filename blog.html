@@ -24,7 +24,6 @@
             <ul class="nav-links">
                 <div class="li-container">
                     <li><a class="link" href="./index.html">Sweso</a></li>
-                    <li><a class="link" href="#">Blog</a></li>
                 </div>
             </ul>
             <div class="blog-menu-container">
@@ -33,47 +32,66 @@
         </div>
     </nav>
     <!-- End nav -->
-    <main class="main">
+
+    <!-- Main -->
+    <main class="main-container">
+        <!-- Tech category -->
         <div class="category-container">
-            <div>
+            <div class="category-title-container">
                 <h1 class="category-title">Technology</h1>
             </div>
-            <div class="category-items-container">
-                <button class="btn-technology-category" data-id="all">All</button>
-                <button class="btn-technology-category" data-id="html&css">HTML and CSS</button>
-                <button class="btn-technology-category" data-id="javascript">JavaScript</button>
-
+            <div class="category-technology">
+                <div><button class="category-btn" data-id="all">All</button></div>
+                <div><button class="category-btn" data-id="html&css">HTML & CSS</button></div>
+                <div><button class="category-btn" data-id="javascript">JavaScript</button></div>
             </div>
         </div>
-        <article class="mini-projects">
-            <div class="article-title-container">
-                <h1 class="article-title">Blog</h1>
+        <!-- End Tech category -->
+
+        <article>
+            <div class="blog-title-container">
+                <h1 class="blog-title">Blog</h1>
             </div>
             <div class="ribbon-container">
                 <img class="ribbon" src="./assets/images/blog_ribbon-logo.png" alt="">
             </div>
-            <div class="projects-container">
-                <!-- single project -->
-                <!-- <div class="single-project" data-id="">
-                    <div class="title">Todo Chrome Extension</div>
-                    <div class="">
-                        <ul class="project-datails">
-                            <li>Tech: <span>JavaScript</span></li>
-                            <li>Date: <span>08/25/2023</span> </li>
-                        </ul>
-                        <div class="single-project-photo-container"><img class="single-project-photo"
-                                src="./assets/images/blog_todo.png" alt=""></div>
-
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat fuga, nisi dolorum nobis
-                            veniam exercitationem eos explicabo obcaecati perferendis earum consequuntur tenetur
-                            incidunt ea corrupti quos, dolore non et optio.</p>
+            <!-- Single project -->
+            <div class="single-project-container">
+                <!-- Single project item -->
+                <!-- <div class="single-project-item">
+                    <div class="single-project-title-container">
+                        <h1 class="single-project-title">Todo</h1>
                     </div>
+                    <div class="single-project-details">
+                        <div class="single-project-technology-container">
+                            <h1 class="single-project-technology">Technology: <span>JavaScript</span></h1>
+                        </div>
+                        <div class="single-project-date-container">
+                            <h1 class="single-project-date">Technology: <span>08/25/2023</span></h1>
+                        </div>
+                    </div>
+                    <div class="single-project-image-container">
+                        <img class="single-project-image" src="./assets/images/blog_menu_food.png" alt="">
+                    </div>
+                    <p class="single-project-dialog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+                        nam
+                        ipsa magnam, eligendi quis
+                        eaque repudiandae quam nisi, consequatur facere, voluptatum odit dolorum aperiam rem dicta quos
+                        laboriosam labore eos.</p>
                 </div> -->
-                <!-- single project -->
+                <!-- Single project item -->
             </div>
-            </div>
+            <!-- End Single project -->
         </article>
     </main>
+    <!-- /End main -->
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <h1>End</h1>
+        </div>
+    </footer>
+    <!-- End footer -->
     <script src="./blog_data.js"></script>
     <script src="./blog.js"></script>
 </body>

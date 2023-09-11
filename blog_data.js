@@ -2,7 +2,7 @@ const blogProjectData = [
     {
         id: 1,
         title: "Todo Chrome Extension",
-        technology: "javascript",
+        technology: "html&css",
         date: "09/10/2023",
         image: './assets/images/blog_todo.png',
         description: "Todo Chrome Extension is awesome project I made. The purposed of this project is to track all your works. I used the following technologies to make this project local storage and javascript",

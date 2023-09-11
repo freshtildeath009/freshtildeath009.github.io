@@ -4,7 +4,7 @@
 }
 
 @font-face {
-    font-family: typeOne;
+    font-family: typeone;
     src: url(./assets/fonts/TravelingTypewriter.ttf);
 }
 
@@ -25,8 +25,6 @@ body {
     color: var(--clr-wht);
     background: var(--clr-blk);
     letter-spacing: 5px;
-    /* background-image: url(./assets/images/blog_background.png); */
-
 }
 
 ul {
@@ -93,7 +91,8 @@ ul li {
 }
 
 .link {
-    font-size: var(--fs-1-2);
+    font-size: var(--fs-1-5);
+    font-weight: var(--fw-900);
     color: var(--clr-blk);
 }
 
@@ -102,7 +101,9 @@ ul li {
 }
 
 .fa-solid {
+    font-size: var(--fs-1-5);
     color: var(--clr-blk);
+    cursor: pointer;
 }
 
 .blog-menu-logo {
@@ -111,210 +112,180 @@ ul li {
 }
 
 /* End Nav */
-/* Nav category */
-.main {
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-template-areas: "category projects";
+/* Main */
+.main-container {
+    display: flex;
+
 }
 
+/* Nav category */
 .category-container {
-    grid-area: category;
     position: fixed;
-    width: 200px;
-    top: 90px;
     height: 100%;
+    width: 200px;
     background: var(--clr-blk);
-    border: 1px solid var(--clr-dblk);
+    box-shadow: var(--bx-shdw);
+    z-index: 1;
     border-left: 3px solid yellow;
 }
 
-.category-items-container {
-    grid-area: projects;
+.category-title-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 100%;
+    justify-content: center;
+    margin-top: 8rem;
+    padding: 1rem 0;
+    font-size: var(--fs-1-2);
+    background: var(--clr-dblk);
+    overflow: hidden;
 }
 
 .category-title {
+    color: var(--clr-wht);
+}
+
+.category-technology {
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 2rem;
-    font-size: var(--fs-1-2);
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.category-technology div {
+    width: 100%;
+}
+
+.category-btn {
+    border: none;
+    background: var(--clr-blk);
+    width: 100%;
+    color: var(--clr-wht);
+    padding: 1rem 0;
+}
+
+.category-btn:hover {
     background: var(--clr-dblk);
 }
 
-.btn-technology-category {
-    width: 100%;
-    padding: 0.7rem;
-    border: none;
-    background: none;
-    color: var(--clr-wht);
-    cursor: pointer;
-}
-
-.btn-technology-category:hover {
-    opacity: 0.8;
-    background: var(--clr-lblk);
-}
-
 /* End nav category */
-/* Ribbon */
-.ribon-logo {
+.blog-title-container {
+    position: relative;
+    width: 0;
+    left: 220px;
+}
+
+.blog-title {
+    font-family: type;
+    font-size: var(--fs-big);
+}
+
+.ribbon-container {
+    position: relative;
+    left: 200px;
     overflow: hidden;
 }
 
 .ribbon {
+    height: 120px;
+    width: 80%;
+}
+
+/* Projects */
+.single-project-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 100%;
 }
 
-/* End Ribbon */
-.main {
-    height: 280%;
+.single-project-item {
+    box-shadow: var(--bx-shdw);
+    position: relative;
+    left: 100px;
+    width: 80%;
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
 
-/* Article */
-.mini-projects {
-    grid-area: projects;
-    height: 100vh;
+.single-project-image {
+    height: 200px;
+    width: 100%;
+    object-fit: fill;
 }
 
-.article-title-container {
-    padding: 2rem 1rem;
-    height: 500px;
-    overflow: hidden;
-}
+/* End Projects */
 
-.article-title {
-    font-size: var(--fs-big);
-    font-family: type;
-    padding: 0 1rem;
-}
-
-.ribbon {
-    height: 130px;
-}
-
-/* Project */
-.projects-container {
+/* Footer */
+.footer-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    overflow: hidden;
+    background-image: url(./assets/images/blog_nav_cover.png);
+    background-size: 100% 100px;
 }
 
-/* Single project */
-.single-project {
-    width: 80%;
-    height: 100%;
-    margin: 1rem;
-    cursor: pointer;
-    overflow: hidden;
-    font-size: var(--fs-1-2);
-    padding: 2rem;
-    box-shadow: var(--bx-shdw);
-    background: var(--clr-blk);
+.footer-container h1 {
+    color: var(--clr-dblk);
+    font-size: var(--fs-1-5);
+    font-weight: var(--fw-900);
 }
 
-.single-project:hover {
-    box-shadow: var(--bx-shdw);
-    background: var(--clr-blk);
-}
-
-.project-datails {
-    display: flex;
-}
-
-.single-project-photo-container {
-    height: 300px;
-    overflow: hidden;
-}
-
-.single-project-photo {
-    height: 100%;
-    width: 100%;
-    opacity: 0.9;
-}
-
-/* Single project */
-/* End project */
-/* End project */
-/* End article */
-
-/* Device */
-/* Laptop device */
+/* End Footer */
 @media only screen and (max-width: 1200px) {
-    .main {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: "projects";
-    }
-
     .blog-menu-container {
         display: block;
-        cursor: pointer;
     }
 
-    /* Category */
     .category-container {
         display: none;
-        z-index: 1;
+        border-left: none;
     }
 
     .category-container-active {
         display: block;
     }
 
-    /* End category */
-
-    /* Article */
-    .article-title-container {
-        height: 350px;
+    .blog-title-container {
+        left: 0;
     }
 
-    .article-title {
+    .blog-title {
+        margin-top: 2rem;
+        padding-left: 1rem;
         font-size: var(--fs-medium);
     }
 
-    /* End article */
-}
-
-/* End Laptop device */
-/* Tablet device */
-@media only screen and (max-width: 786px) {
-    .category-container {
-        border-left: none;
+    .ribbon-container {
+        left: 0;
     }
 
-    /* Article */
-    .article-title-container {
-        height: 300px;
-    }
-
-    .article-title {
+    /* Projects */
+    .single-project-item {
         position: relative;
-        bottom: -3rem;
-        font-size: var(--fs-small);
+        left: 0;
     }
 
-    .ribbon {
-        height: 100px;
+    .single-project-dialog {
+        font-size: var(--fs-0-9);
     }
+
 
 }
 
-/* End Tablet device */
-/* Mobile device */
-@media only screen and (max-width: 600px) {
-
-    /* Article */
-    .ribbon {
-        height: 70px;
+@media only screen and (max-width: 768px) {
+    .blog-title {
+        padding-top: 3rem;
+        font-size: 7rem;
     }
 
-}
+    .single-project-container {
+        margin-top: 4rem;
 
-/* End Mobile device */
-/* End device */
+    }
+
+    .single-project-item {
+        width: 100%;
+
+    }
+}
