@@ -99,9 +99,10 @@ ul li {
 .hero-greeting {
   font-size: var(--fs-0-9);
   position: relative;
-  bottom: -60px;
+  top: 3.5rem;
+  left: 0;
   animation: heroGreeting ease-in 1s;
-  left: -9px;
+
 }
 
 @keyframes heroGreeting {
@@ -111,7 +112,7 @@ ul li {
   }
 
   100% {
-    left: -11px;
+    left: 0px;
     opacity: 1;
   }
 }
