@@ -47,6 +47,7 @@ function displaySingleProduct(project) {
     singleProjectContainerDOM.innerHTML = result;
 }
 
+// Filter out the project
 categoryBtns.forEach((buttons) => {
     buttons.addEventListener("click", (event) => {
         let id = event.currentTarget.dataset.id;
@@ -65,3 +66,16 @@ categoryBtns.forEach((buttons) => {
 document.addEventListener('DOMContentLoaded', () => {
     displaySingleProduct(blogProjectData)
 })
+
+
+// When scrolling down, navbar is hidden
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.querySelector(".nav-container").style.top = "0";
+    } else {
+        document.querySelector(".nav-container").style.top = "-87px";
+    }
+    prevScrollpos = currentScrollPos;
+}

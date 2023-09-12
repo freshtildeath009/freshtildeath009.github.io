@@ -11,9 +11,7 @@ const projectOneTitle = document.querySelector(".project-one-title");
 const projectOneContent = document.querySelector(".project-one-content");
 // Change photo
 const programmerPhoto = document.querySelector(".profile");
-const programmerContainerPhoto = document.querySelector(
-  ".contact-logo-container"
-);
+const programmerContainerPhoto = document.querySelector(".contact-logo-container");
 // End variables
 
 // Menu
@@ -191,4 +189,15 @@ dotsNav.addEventListener("click", (e) => {
 });
 // End carousel
 
+// When scrolling down, navbar is hidden
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector(".nav-container").style.top = "0";
+  } else {
+    document.querySelector(".nav-container").style.top = "-60px";
+  }
+  prevScrollpos = currentScrollPos;
+}
 

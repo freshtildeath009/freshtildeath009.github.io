@@ -68,6 +68,7 @@ button {
     background-size: 100% 100%;
     border-top: solid 3px yellow;
     overflow: hidden;
+    transition: 0.3s top;
 }
 
 .logo-links-container {
